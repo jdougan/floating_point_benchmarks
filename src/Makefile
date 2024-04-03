@@ -1,7 +1,7 @@
 
 all:
 	@echo "Please make for a specified language: ada algol60 algol68"
-	@echo "    c c++ chapel cobol erlang fortran freebasic go haskell"
+	@echo "    c c++ chapel cobol d erlang fortran freebasic go haskell"
 	@echo "    pascal pli prolog rust scala simula swift"
 
 ada:	FORCE
@@ -24,6 +24,9 @@ chapel: FORCE
 
 cobol:	FORCE
 	( cd cobol; make clean; make )
+
+d:	FORCE
+	( cd d; make clean; make )
 
 erlang: FORCE
 	( cd erlang; make clean; make )
@@ -79,6 +82,7 @@ dist:	FORCE
 	    c++ \
 	    chapel \
 	    cobol \
+	    d \
 	    erlang \
 	    forth \
 	    fortran \
@@ -117,6 +121,7 @@ clean:	FORCE
 	( cd c++; make clean )
 	( cd chapel; make clean )
 	( cd cobol; make clean )
+	( cd d; make clean )
 	( cd erlang; make clean )
 	( cd fortran; make clean )
 	( cd freebasic; make clean )

@@ -1,0 +1,10 @@
+# .gitignore
+*.sublime-workspace
+*.sublime-project
+*.map
+*.o
+*.a
+*.out
+core*
+fbench
+ffbench

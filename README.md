@@ -1,4 +1,13 @@
 # Fourmilab Floating Point Benchmarks
+- Originally By John Walker http://www.fourmilab.ch/
+- Updates by John Dougan <jdougan@acm.org>
+
+Sadly, as the "balding geezer" is no longer with us, the github repository of
+the floating point benchmarks is unmaintained.  Since I (John Dougan) am
+adding a D port to it, I may as well hold onto it until someone motivated
+wants to extend it.
+
+## Rationale
 
 There are many disadvantages to being a balding geezer. In 
 compensation, if you've managed to live through the second half of the 

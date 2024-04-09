@@ -24,11 +24,14 @@ PROGRAMS = fbench ffbench
 
 all:	$(PROGRAMS)
 
-fbench: fbench.d math_fbench.d
-	$(DCC) fbench.d  math_fbench.d $(DOPTS)
-
 clean:
 	rm -f $(PROGRAMS) *.o *.out core* fbench ffbench *.map
+
+allclean: clean
+	# del subdirs, onece we have them
+
+fbench: fbench.d math_fbench.d
+	$(DCC) fbench.d  math_fbench.d $(DOPTS)
 
 test_fbench: fbench
 	echo -e "" | sh -c "time -p ./fbench $(ITERATIONS_FBENCH_TEST)"
@@ -41,5 +44,3 @@ ffbench: ffbench.d
 
 test_ffbench: fbench
 	echo -e "" | sh -c "time -p ./fbench $(ITERATIONS_FFBENCH_TEST)"
-
-

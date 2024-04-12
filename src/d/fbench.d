@@ -318,11 +318,11 @@ immutable static double[4][4] testcase = [
 int main(string[] args)
 {
     // FIXME change to an appropriate conversion function in stdc?
-    import std.conv; 
+    import std.conv: to ; 
+    import std.string: toStringz ;
     import core.stdc.stdio;
     import core.stdc.stdlib;
     import core.stdc.string;
-    import std.string: toStringz;
 
 
     int i, j, errors;

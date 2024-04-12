@@ -97,8 +97,25 @@ is on my end.
 I have dropped the CALab output compile option, but since CALab is now
 open source it may be re-added later. I added 2 compile options:
 lowVolumeDebug and highVolumeDebug. The volume refers to the
-potential cascade on output setting each weith to true can provide.
+potential cascade on output setting each switch to true can provide.
 lowVolumeDebug enables printing mesaages that are outside the loops,
 mostly do once stuff. highVolumeDebug gates the printing inside the
 loops.
 
+ Compiler Version Info
+-----------------------
+From std.compiler:
+```
+Compiler-Name: GNU D
+Vendor: gnu
+Vendor-Version: 2.76
+D-Version: 2
+```
+
+from gdc --version
+```
+gdc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```

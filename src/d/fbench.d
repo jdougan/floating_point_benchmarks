@@ -1,5 +1,4 @@
-@safe 
-/*
+/**
 
         John Walker's Floating Point Benchmark, derived from...
 
@@ -87,7 +86,7 @@ enum internalMath = false;
 static if(internalMath)
   {
     // use a cut down transcendantals package
-    // this will test generap fp spped rather than\
+    // this will test general fp speed rather than\
     // transcendantal fns.
     import math_fbench;
   }
@@ -225,7 +224,7 @@ immutable static double[4][4] testcase = [
                                 at intercept after refraction.
 
 */
-@nogc nothrow @safe static void transit_surface() 
+static void transit_surface() @nogc nothrow @safe
 {
     double
             iang,               /* Incidence angle */
@@ -289,7 +288,7 @@ immutable static double[4][4] testcase = [
 }
 
 /*  Perform ray trace in specific spectral line  */
-@nogc nothrow @safe static void trace_line(int line, double ray_h)
+static void trace_line(int line, double ray_h) @nogc nothrow @safe
 {
     int i;
 

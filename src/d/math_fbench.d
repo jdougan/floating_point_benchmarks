@@ -9,16 +9,16 @@
 // import core.stdc.stdlib;
 
 
-@nogc nothrow pure @safe static double fabs(double x) {
+static double fabs(double x) @nogc nothrow pure @safe {
     pragma(inline,true); 
     return ((x < 0.0) ? -x : x); 
- }
+}
 
 enum pic = 3.1415926535897932;
 
 /*  Commonly used constants  */
 
- immutable static double pi = pic,
+immutable static double pi = pic,
                     twopi = pic * 2.0,
                     piover4 = pic / 4.0,
                     fouroverpi = 4.0 / pic,
@@ -26,7 +26,7 @@ enum pic = 3.1415926535897932;
 
 /*  Coefficients for ATAN evaluation  */
 
- immutable static double[] atanc = [
+immutable static double[] atanc = [
         0.0,
         0.4636476090008061165,
         0.7853981633974483094,
@@ -40,7 +40,7 @@ enum pic = 3.1415926535897932;
 
 /*  aint(x)       Return integer part of number.  Truncates towards 0    */
 
-@nogc nothrow pure @safe static double aint(double x)
+static double aint(double x) @nogc nothrow pure @safe
 {
         long l;
 
@@ -58,7 +58,7 @@ enum pic = 3.1415926535897932;
 
 /*  sin(x)        Return sine, x in radians  */
 
-@nogc nothrow pure @safe static double sin(double x)
+static double sin(double x) @nogc nothrow pure @safe
 {
         int sign;
         double y, r, z;
@@ -98,7 +98,7 @@ enum pic = 3.1415926535897932;
 
 /*  cos(x)        Return cosine, x in radians, by identity  */
 
-@nogc nothrow pure @safe static double cos(double x)
+static double cos(double x) @nogc nothrow pure @safe
 {
     x = (x < 0.0) ? -x : x;
     if (x > twopi) {                /* Do range reduction here to limit */
@@ -109,7 +109,7 @@ enum pic = 3.1415926535897932;
 
 /*  tan(x)        Return tangent, x in radians, by identity  */
 
-@nogc nothrow pure @safe static double tan(double x)
+static double tan(double x) @nogc nothrow pure @safe
 {
     return sin(x) / cos(x);
 }
@@ -117,7 +117,7 @@ enum pic = 3.1415926535897932;
 /*  sqrt(x)       Return square root.  Initial guess, then Newton-
                   Raphson refinement  */
 
-@nogc nothrow pure @safe static double sqrt(double x)
+static double sqrt(double x) @nogc nothrow pure @safe
 {
     double c, cl, y;
     int n;
@@ -151,7 +151,7 @@ enum pic = 3.1415926535897932;
                   range -pi/2 to pi/2  */
 
 
-@nogc nothrow pure @safe static double atan(double x)
+static double atan(double x) @nogc nothrow pure @safe
 {
     int sign, l, y;
     double a, b, z;
@@ -191,7 +191,7 @@ atl:
 
 /*  atan2(y,x)    Return arctangent in radians of y/x,
                   range -pi to pi  */
-@nogc nothrow pure @safe static double atan2(double y, double x)
+static double atan2(double y, double x) @nogc nothrow pure @safe
 {
     double temp;
 
@@ -219,7 +219,7 @@ atl:
 
 
 /*  asin(x)       Return arcsine in radians of x  */
-@nogc nothrow pure @safe static double asin(double x)
+static double asin(double x) @nogc nothrow pure @safe
 {
     if (fabs(x) > 1.0) {
        //fprintf(stderr,

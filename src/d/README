@@ -90,9 +90,9 @@ had dealt with it in a port.  I checked around and no one has ported
 it to another language, at least in John Walker's github repository
 or in a quick google search.  But the D port does compile cleanly,
 and I don't think of my errors are huge.  I want to instrument the
-ANSI C version and see if it goes out of range there but C is just
-ignoreing it. John was pretty good at this, so I expect the problem
-is on my end.
+ANSI C version (FORTIFY_SOURCE?) and see if it goes out of range
+there but C is just ignoreing it. John was pretty good at this, so I
+expect the problem is on my end.
 
 I have dropped the CALab output compile option, but since CALab is now
 open source it may be re-added later. I added 2 compile options:
